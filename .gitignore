@@ -1,0 +1,23 @@
+_xmsgs/
+temp/
+work/
+isim/
+*.xmsgs
+*.xreport
+*.sdb
+*.html
+.lso
+*.stx
+*.gise
+*.xst
+*.prj
+*.exe
+*.log
+*.cmd
+*.wdb
+
+# vim backup files
+*.swp
+*.tmp
+*.bak
+*~

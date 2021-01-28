@@ -2,6 +2,7 @@ _xmsgs/
 temp/
 work/
 isim/
+top_html/
 *.xmsgs
 *.xreport
 *.sdb
@@ -15,6 +16,33 @@ isim/
 *.log
 *.cmd
 *.wdb
+
+_ngo/
+*.err
+*.bld
+*.chk
+*.cmd_log
+*.cxt
+*.gyd
+*.lso
+*.mfd
+*.nga
+*.ngc
+*.ngd
+*.ngr
+*.pad
+*.pnx
+*.rpt
+*.syr
+*.tim
+*.tspec
+*.vm6
+*.xml
+*.xrpt
+*.csv
+webtalk_*.xml
+*.xbcd
+
 
 # vim backup files
 *.swp

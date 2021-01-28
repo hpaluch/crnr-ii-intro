@@ -23,8 +23,11 @@ module top(
     output [3:0] LEDS
     );
 
+wire q0,q1,q2,q3;
 wire clk_1mhz;
 wire internal_ce;
+
+assign LEDS = { q3,q2,q1,q0 };
 
 // we use ClockDivier on CoolRunner II to divide input 8MHz (from PCLK) by 8
 // to 1Mhz
@@ -45,10 +48,10 @@ CD100000 U2 (
 //4-Bit Cascadable Binary Counter with Clock Enable and Asynchronous Clear
 // Filename    : CB4CE.v 
 CB4CE U3 (
-  .Q0 ( LED[0] ),
-  .Q1 ( LED[1] ),
-  .Q2 ( LED[2] ),
-  .Q3 ( LED[3] ),
+  .Q0 ( q0 ),
+  .Q1 ( q1 ),
+  .Q2 ( q2 ),
+  .Q3 ( q3 ),
   .CLR ( 1'd0 ),
   .CE ( internal_ce ),
   .C  ( clk_1mhz)
@@ -61,7 +64,7 @@ endmodule
 module CD100000(input C,output CEO);
 
 localparam TERMINAL_COUNT = 17'd99_999; 
-reg counter_int [17:0] = 0; // internal counter
+reg [17:0] counter_int  = 0; // internal counter
 
 always @(posedge C)
    if (counter_int < TERMINAL_COUNT)

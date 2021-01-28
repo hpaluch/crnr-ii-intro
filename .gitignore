@@ -2,11 +2,10 @@ _xmsgs/
 temp/
 work/
 isim/
-top_html/
+*.html
 *.xmsgs
 *.xreport
 *.sdb
-*.html
 .lso
 *.stx
 *.gise
@@ -44,6 +43,11 @@ webtalk_*.xml
 *.xbcd
 *.lfp
 
+# Yes, exceptions in sub-folders are weird...
+top_html/*
+!top_html/fit/
+top_html/fit/*
+!top_html/fit/ascii.htm
 
 # vim backup files
 *.swp

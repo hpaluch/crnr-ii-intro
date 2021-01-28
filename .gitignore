@@ -49,6 +49,10 @@ top_html/*
 top_html/fit/*
 !top_html/fit/ascii.htm
 
+impact.xsl
+impact_impact.xwbt
+iseconfig/
+
 # vim backup files
 *.swp
 *.tmp

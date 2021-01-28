@@ -42,6 +42,7 @@ _ngo/
 *.csv
 webtalk_*.xml
 *.xbcd
+*.lfp
 
 
 # vim backup files

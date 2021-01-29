@@ -3,7 +3,7 @@
 It is ideal project for Verilog starters.
 
 What it does?
-- It outputs 4-bit binary counters to LD0 to LD3 at 10Hz.
+- It outputs 4-bit binary counter to LD0 to LD3 at 10Hz.
 
 WARNING! It is currently one evening project - so please
 be patient and tolerant :-)
@@ -51,7 +51,7 @@ There are only two Verilog files:
 * Open project `crnr-ii-intro.xise` in `ISE Project Navigator`
 * ensure that file `top (top.v)` is selected `Hierarchy` - that
   one right under `xc2c256-7TQ144` item.
-* Double-click on `Implmenet Design` of Processes Window in Design tab
+* Double-click on `Implement Design` of Processes Window in Design tab
 * it should generate new `top.jed` (JEDEC file) to be pgorammed
   into your CoolRunner-II CPLD.
 
@@ -60,6 +60,59 @@ There are only two Verilog files:
 * Run iMPACT, and open its project file `prog-crnrii.ipf`.
 * click on menu `Operations` -> `Program`
 
+# Tips
+
+## How to get Pin mappings
+
+Pins are assigned using Processes -> User Constraints -> Floorplan
+IO - Pre-Synthesis. They are stored in file `top.ucf`.
+
+How to know mappings on Starter Board?
+
+Best way is to download Digilent's example source from:
+- https://reference.digilentinc.com/_media/reference/programmable-logic/coolrunner-ii/sourcecrii_demo.zip
+
+And look into file `Source\netio.ucf` - which is like:
+
+```
+; 8 MHz on-board clock generator
+NET 	"CLK"			LOC = "P38"; #PCLK
+
+; on-board LEDs
+NET	"LD<0>"		LOC = "P69"; #LD0
+NET	"LD<1>"		LOC = "P68"; #LD1
+NET	"LD<2>"		LOC = "P66"; #LD2
+NET	"LD<3>"		LOC = "P64"; #LD3
+
+; on-board push-buttons
+NET 	"BTN<0>" 	LOC = "P143"; #BTN0
+NET 	"BTN<1>" 	LOC = "P94"; #BTN1
+
+; on-board switches
+NET	"SW<0>"		LOC = "P39";	#SW0
+NET	"SW<1>"		LOC = "P124";	#SW1
+
+; segments of 4-digit LED display (+ decimal point?)
+NET	"CAT<0>"		LOC = "P56";
+NET	"CAT<1>"		LOC = "P53";
+NET	"CAT<2>"		LOC = "P60";
+NET	"CAT<3>"		LOC = "P58";
+NET	"CAT<4>"		LOC = "P57";
+NET	"CAT<5>"		LOC = "P54";
+NET	"CAT<6>"		LOC = "P61";
+NET	"CAT<7>"		LOC = "P59";
+
+; multiplexed common anode for every digit on LED display
+NET	"ANO<3>"		LOC = "P130";
+NET	"ANO<2>"		LOC = "P129";
+NET	"ANO<1>"		LOC = "P128";
+NET	"ANO<0>"		LOC = "P126";
+```
+
+You can then  enter specific pin name (for example `P38`)
+to "Loc" cell of Floorplan editor table. After changing focus
+to other row it will automatically fill few other columns (Bank, Function
+Block, etc.)
 
 [Free Xilinx ISE WebPack license]: https://www.xilinx.com/support/licensing_solution_center.html
 [Xilinx ISE Webpack 14.7]: https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools/archive-ise.html

@@ -3,7 +3,7 @@
  
 cpldfit:  version P.20131013                        Xilinx Inc.
                                   Fitter Report
-Design Name: top                                 Date:  1-30-2021,  9:59AM
+Design Name: top                                 Date:  1-30-2021, 11:00AM
 Device Used: XC2C256-7-TQ144
 Fitting Status: Successful
 
@@ -86,10 +86,10 @@ J1_IO1_4<2>         3     5     2    FB2_5   5     GTS/I/O   O       LVCMOS18   
 J1_IO1_4<1>         3     4     2    FB2_13  7     I/O       O       LVCMOS18           FAST DFF     RESET
 J1_IO7              1     14    2    FB2_14  9     I/O       O       LVCMOS18           FAST         
 J1_IO1_4<0>         2     2     2    FB2_15  10    I/O       O       LVCMOS18           FAST DEFF    RESET
-LEDS<3>             1     4     1    FB14_4  69    I/O       O       LVCMOS18           FAST TFF     RESET
-LEDS<2>             1     3     1    FB14_6  68    I/O       O       LVCMOS18           FAST TFF     RESET
-LEDS<1>             1     2     1    FB14_13 66    I/O       O       LVCMOS18           FAST TFF     RESET
-LEDS<0>             1     1     1    FB14_14 64    I/O       O       LVCMOS18           FAST TFF     RESET
+LEDS<0>             1     1     1    FB14_4  69    I/O       O       LVCMOS18           FAST TFF     RESET
+LEDS<1>             1     2     1    FB14_6  68    I/O       O       LVCMOS18           FAST TFF     RESET
+LEDS<2>             1     3     1    FB14_13 66    I/O       O       LVCMOS18           FAST TFF     RESET
+LEDS<3>             1     4     1    FB14_14 64    I/O       O       LVCMOS18           FAST TFF     RESET
 
 ** 25 Buried Nodes **
 
@@ -539,17 +539,17 @@ Name                          Pt            No.  Type    Use
 (unused)                      0     FB14_1  74   I/O           
 (unused)                      0     FB14_2  71   I/O           
 (unused)                      0     FB14_3  70   I/O           
-LEDS<3>                       1     FB14_4  69   I/O     O                 
+LEDS<0>                       1     FB14_4  69   I/O     O                 
 (unused)                      0     FB14_5       (b)           
-LEDS<2>                       1     FB14_6  68   I/O     O                 
+LEDS<1>                       1     FB14_6  68   I/O     O                 
 (unused)                      0     FB14_7       (b)           
 (unused)                      0     FB14_8       (b)           
 (unused)                      0     FB14_9       (b)           
 (unused)                      0     FB14_10      (b)           
 (unused)                      0     FB14_11      (b)           
 (unused)                      0     FB14_12      (b)           
-LEDS<1>                       1     FB14_13 66   I/O     O                 
-LEDS<0>                       1     FB14_14 64   I/O     O                 
+LEDS<2>                       1     FB14_13 66   I/O     O                 
+LEDS<3>                       1     FB14_14 64   I/O     O                 
 (unused)                      0     FB14_15      (b)           
 (unused)                      0     FB14_16 61   I/O           
 
@@ -559,10 +559,10 @@ Signals Used by Logic in Function Block
 
 Signal                     1         2         3         4 FB      
 Name             0----+----0----+----0----+----0----+----0 Inputs  
-LEDS<3>           XXXX.................................... 4       
-LEDS<2>           XXX..................................... 3       
-LEDS<1>           XX...................................... 2       
 LEDS<0>           X....................................... 1       
+LEDS<1>           XX...................................... 2       
+LEDS<2>           XXX..................................... 3       
+LEDS<3>           XXXX.................................... 4       
                  0----+----1----+----2----+----3----+----4
                            0         0         0         0
 *********************************** FB15 ***********************************
@@ -876,12 +876,12 @@ No. Name                           No. Name
  61 KPR                             133 KPR                           
  62 GND                             134 KPR                           
  63 TDI                             135 KPR                           
- 64 LEDS<0>                         136 KPR                           
+ 64 LEDS<3>                         136 KPR                           
  65 TMS                             137 KPR                           
- 66 LEDS<1>                         138 KPR                           
+ 66 LEDS<2>                         138 KPR                           
  67 TCK                             139 KPR                           
- 68 LEDS<2>                         140 KPR                           
- 69 LEDS<3>                         141 VCCIO-1.8                     
+ 68 LEDS<1>                         140 KPR                           
+ 69 LEDS<0>                         141 VCCIO-1.8                     
  70 KPR                             142 KPR                           
  71 KPR                             143 KPR                           
  72 GND                             144 GND                           

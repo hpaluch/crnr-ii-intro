@@ -2,9 +2,13 @@
 
 ![CoolRunner-II blinking LEDs](https://raw.githubusercontent.com/hpaluch/crnr-ii-intro/master/assets/coolrunner-ii-in-action.gif)
 
-> NOTE: The LEDs are actually swapped (fastest one should be LD0,
-> slowest one LD3). It was because I blindly copied PIN assignment
-> from Digilent's demo project. I shall fix it someday in future.
+> NOTE: The LEDs on animated git are swapped (fastest one should be LD0,
+> slowest one LD3). It was because I missed that Pin assignment
+> table lists MSB and LSB in reverse order (higher bits are first
+> in that table)
+>
+> This bug is fixed in current Design. I will someday update that picture
+> tooo...
 
 It is ideal project for Verilog starters.
 
@@ -68,9 +72,22 @@ There are only two Verilog files:
 
 # How to program
 
+> WARNING! I have no luck opening provided `prog-crnrii.ipf` - the
+> iMPACT always crashed without any notice. Therefore please keep
+> "Default" in `Manage Configuration Properties` and always
+> configure iMPACT from scratch as shown below:
+
 Ensure that `top (top.v)` node is selected in `Implementation` view and
 * double click on Processes -> Implement Design -> Configure Target
   Device -> Manage Configuration Project (iMpact)
+* now click on Edit -> Launch Wizard...
+* select 1st option `Configure devices using Boundery-Scan (JTAG)`
+  with default listbox `Automatically connect to....`
+* confirm Auto Assign pop-up
+* select `top.jed` as input file
+* click `OK` on `Device Programming Properties`
+
+Now the real stuff:
 * click on menu `Operations` -> `Program`
 * after few seconds device should be programmed and automatically run
   (so LEDs LD0 to LD3 should blink - each one 2 times slower)

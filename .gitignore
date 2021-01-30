@@ -2,6 +2,8 @@ _xmsgs/
 temp/
 work/
 isim/
+prog-crnrii_xdb/
+_pace.ucf
 *.html
 *.xmsgs
 *.xreport

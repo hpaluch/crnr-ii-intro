@@ -4,6 +4,11 @@ It is ideal project for Verilog starters.
 
 What it does?
 - It outputs 4-bit binary counter to LD0 to LD3 at 10Hz.
+- It also outputs copy of LED signal to Pmod J1 pins 1-4 (IO1-IO4)
+  (for monitoring)
+- It also outputs internal `internal_ce` signal 
+  (short pulse with 10Hz frequency for chained counters) to
+  Pmod J1 Pin 7 (IO7)
 
 WARNING! It is currently one evening project - so please
 be patient and tolerant :-)
@@ -52,13 +57,17 @@ There are only two Verilog files:
 * ensure that file `top (top.v)` is selected `Hierarchy` - that
   one right under `xc2c256-7TQ144` item.
 * Double-click on `Implement Design` of Processes Window in Design tab
-* it should generate new `top.jed` (JEDEC file) to be pgorammed
+* it should generate new `top.jed` (JEDEC file) to be programmed
   into your CoolRunner-II CPLD.
 
 # How to program
 
-* Run iMPACT, and open its project file `prog-crnrii.ipf`.
+Ensure that `top (top.v)` node is selected in `Implementation` view and
+* double click on Processes -> Implement Design -> Configure Target
+  Device -> Manage Configuration Project (iMpact)
 * click on menu `Operations` -> `Program`
+* after few seconds device should be programmed and automatically run
+  (so LEDs LD0 to LD3 should blink - each one 2 times slower)
 
 # Tips
 

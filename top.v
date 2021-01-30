@@ -7,13 +7,16 @@
 // Target Devices: XC2C256-7-TQ144
 //                 on Digilent CoolRunner-II CPLD Starter Board
 // Tool versions: Xilinx ISE WebPack 14.7
-// Description: Introductory project - blin 4 on-board LEDs
+// Description: Introductory project - blink 4 on-board LEDs
 //////////////////////////////////////////////////////////////////////////////////
 
 // TOP module - input/output binds to CPLD's pins
 module top(
-    input PCLK,       // on-board 8MHz clock, connected to GCK2 pin
-    output [3:0] LEDS // on-board LEDs LD0 to LD3
+    input PCLK,            // on-board 8MHz clock, connected to GCK2 pin
+    output [3:0] LEDS,     // on-board LEDs LD0 to LD3
+	 output [3:0] J1_IO1_4, // on-board Pmod J1 IO 1 to 4 - copy of LEDs output
+    output J1_IO7 // onboard Pmod J1 IO7 - copy of internal_ce
+	               // which should be short pulse with 10Hz frequency
     );
 
 wire q0,q1,q2,q3;
@@ -21,6 +24,8 @@ wire clk_1mhz;
 wire internal_ce;
 
 assign LEDS = { q3,q2,q1,q0 };
+assign J1_IO1_4 = LEDS;
+assign J1_IO7 = internal_ce;
 
 // we use ClockDivider (called CoolClock) on CoolRunner-II
 // to divide input 8MHz (from PCLK) by 8 to 1Mhz

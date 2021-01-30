@@ -96,7 +96,7 @@ Now the real stuff:
 
 # Measurements
 
-I have starter with two channel
+I have started with two channel
 scope [Digilent Analog Discovery 2][Digilent Analog Discovery 2]
 to:
 - verify used logic (it should be 3.3V TTL)
@@ -109,8 +109,8 @@ Scope Results are on picture below:
 ![Scope LEDs LD0 and LD1](https://raw.githubusercontent.com/hpaluch/crnr-ii-intro/master/assets/scope-ld0-ld1.png)
 
 Here are decoded LD0 to LD3 outputs (from CB4CE counter)
-using [Digilent Analog Discovery 2][Digilent Analog Discovery 2]
-
+using [Digilent Analog Discovery 2][Digilent Analog Discovery 2] in
+Logic mode:
 
 ![Analyzer LEDs LD0 to LD3](https://raw.githubusercontent.com/hpaluch/crnr-ii-intro/master/assets/analyzer-ld0-ld3.png)
 
@@ -126,15 +126,15 @@ NOTE: It is tricky to see `internal_ce` signal (shown as `DIO 4`), because:
 # Tips
 
 Where to start? Go to
- - [Digilent CoolRunner-II CPLD Starter Board Support]
-igilent CoolRunner-II CPLD Starter Board Support]
+ - [Digilent CoolRunner-II CPLD Starter Board - Documentation][Digilent CoolRunner-II CPLD Starter Board Support]
 
 There are all imoprtant files:
 - Board Schematic
   - https://reference.digilentinc.com/_media/reference/programmable-logic/coolrunner-ii/coolrunner-ii_sch.pdf
 - Digilent's demo source code:
   - https://reference.digilentinc.com/_media/reference/programmable-logic/coolrunner-ii/sourcecrii_demo.zip
- - Board Reference manual
+- Board Reference manual
+  - https://reference.digilentinc.com/reference/programmable-logic/coolrunner-ii/reference-manual
 
 TODO: important Xilinx pages
 

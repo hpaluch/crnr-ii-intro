@@ -13,11 +13,11 @@
 It is ideal project for Verilog starters.
 
 What it does?
-- It outputs 4-bit binary counter to LD0 to LD3 at 10Hz.
-- It also outputs copy of LED signal to Pmod J1 pins 1-4 (IO1-IO4)
+- It outputs 4-bit binary counter to LD0 to LD3 at 5Hz.
+- It also outputs copy of LED signals to Pmod J1 pins 1-4 (IO1-IO4)
   (for monitoring)
 - It also outputs internal `internal_ce` signal 
-  (short pulse with 10Hz frequency for chained counters) to
+  (short pulse with 10 Hz frequency for chained counters) to
   Pmod J1 Pin 7 (IO7)
 
 WARNING! It is currently one evening project - so please
@@ -40,10 +40,10 @@ Required Software:
 There are only two Verilog files:
 - `top.v` - master - the `top` module inputs and outputs are mapped
   to real pins on CPLD. It uses following modules:
-  - `CLK_DIV8` - on-chip clock divider by 8x, 1Mhz output is connected
+  - `CLK_DIV8` - on-chip clock divider by 8x, 1 MHz output is connected
      to internal variable `clk_1mhz`
   - `CD100000` - synchronous cascadable decimal counter, used to
-     "divide" 1Mhz to 10Hz. Please note that all counters in cascade
+     "divide" 1 Mhz to 10 Hz. Please note that all counters in cascade
      further use `clk_1mhz`. The "clock division" is realised by
      pulse `CE` (Counter Enable), that is active on every 100_000 Clock
      tick.
@@ -55,11 +55,13 @@ There are only two Verilog files:
 * There is only input called `PCLK` (on `GCK2` pin of CoolRunner-II)
   which is on-board 8MHz clock.
 * This clock is divided by embedded CoolRunner-II divider by 8 to get
-  1MHz internal clock signal 
-* There is then internal counter to 100_000 (to get 10Hz on `CEO` - Counter
+  1 MHz internal clock signal 
+* There is then internal counter to 100_000 (to get 10 Hz on `CEO` - Counter
   enable output)
 * and there finaly 4-bit counter CB4CE - it's output drives 4 dedicated
-  LEDs on board...
+  LEDs on board... Please note that the fastest output Q0 divides frequency
+  by two(!). So the output LED LD0 does blink at rate 5 Hz instead of 10 Hz.
+  See scope results for verification...
 
 # How to Synthesize (build programming file)
 
@@ -79,7 +81,7 @@ There are only two Verilog files:
 
 Ensure that `top (top.v)` node is selected in `Implementation` view and
 * double click on Processes -> Implement Design -> Configure Target
-  Device -> Manage Configuration Project (iMpact)
+  Device -> Manage Configuration Project (iMPACT)
 * now click on Edit -> Launch Wizard...
 * select 1st option `Configure devices using Boundery-Scan (JTAG)`
   with default listbox `Automatically connect to....`
@@ -92,7 +94,49 @@ Now the real stuff:
 * after few seconds device should be programmed and automatically run
   (so LEDs LD0 to LD3 should blink - each one 2 times slower)
 
+# Measurements
+
+I have starter with two channel
+scope [Digilent Analog Discovery 2][Digilent Analog Discovery 2]
+to:
+- verify used logic (it should be 3.3V TTL)
+- verify frequencies
+- verify noise (high noise means risks of glitches and unexpected
+  behaviour of CPLD).
+
+Scope Results are on picture below:
+
+![Scope LEDs LD0 and LD1](https://raw.githubusercontent.com/hpaluch/crnr-ii-intro/master/assets/scope-ld0-ld1.png)
+
+Here are decoded LD0 to LD3 outputs (from CB4CE counter)
+using [Digilent Analog Discovery 2][Digilent Analog Discovery 2]
+
+
+![Analyzer LEDs LD0 to LD3](https://raw.githubusercontent.com/hpaluch/crnr-ii-intro/master/assets/analyzer-ld0-ld3.png)
+
+The `DIO 0` (LD0) to `DIO 3` (LD3) is decoded as bus so you can nicely read
+total value of CB4CE 4-bit counter.
+
+NOTE: It is tricky to see `internal_ce` signal (shown as `DIO 4`), because:
+- it is only 1 us (micro-second) wide, but period is 5Hz (200ms)
+- so the analyzer must run in great detail to catch such pulse at all
+- but it will not run long enough to see whole period...
+
+
 # Tips
+
+Where to start? Go to
+ - [Digilent CoolRunner-II CPLD Starter Board Support]
+igilent CoolRunner-II CPLD Starter Board Support]
+
+There are all imoprtant files:
+- Board Schematic
+  - https://reference.digilentinc.com/_media/reference/programmable-logic/coolrunner-ii/coolrunner-ii_sch.pdf
+- Digilent's demo source code:
+  - https://reference.digilentinc.com/_media/reference/programmable-logic/coolrunner-ii/sourcecrii_demo.zip
+ - Board Reference manual
+
+TODO: important Xilinx pages
 
 ## How to get Pin mappings
 
@@ -149,4 +193,5 @@ Block, etc.)
 [Free Xilinx ISE WebPack license]: https://www.xilinx.com/support/licensing_solution_center.html
 [Xilinx ISE Webpack 14.7]: https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools/archive-ise.html
 [Digilent CoolRunner-II CPLD Starter Board]: https://store.digilentinc.com/coolrunner-ii-cpld-starter-board-limited-time/
-
+[Digilent CoolRunner-II CPLD Starter Board Support]: https://reference.digilentinc.com/reference/programmable-logic/coolrunner-ii/start?redirect=1
+[Digilent Analog Discovery 2]: https://store.digilentinc.com/analog-discovery-2-100msps-usb-oscilloscope-logic-analyzer-and-variable-power-supply/

@@ -8,7 +8,7 @@
 > in that table)
 >
 > This bug is fixed in current Design. I will someday update that picture
-> tooo...
+> too...
 
 It is ideal project for Verilog starters.
 

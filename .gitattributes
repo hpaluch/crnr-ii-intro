@@ -3,3 +3,7 @@
 *.xise text eol=lf
 *.v text eol=lf
 
+*.gif binary
+*.png binary
+*.ipf binary
+

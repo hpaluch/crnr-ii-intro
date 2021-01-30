@@ -1,5 +1,7 @@
 # Introductory project for CoolRunner-II CPLD Starter Board
 
+![CoolRunner-II blinking LEDs](https://raw.githubusercontent.com/hpaluch/crnr-ii-intro/assets/coolrunner-ii-in-action.gif)
+
 It is ideal project for Verilog starters.
 
 What it does?

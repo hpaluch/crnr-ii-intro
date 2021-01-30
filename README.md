@@ -2,6 +2,10 @@
 
 ![CoolRunner-II blinking LEDs](https://raw.githubusercontent.com/hpaluch/crnr-ii-intro/master/assets/coolrunner-ii-in-action.gif)
 
+> NOTE: The LEDs are actually swapped (fastest one should be LD0,
+> slowest one LD3). It was because I blindly copied PIN assignment
+> from Digilent's demo project. I shall fix it someday in future.
+
 It is ideal project for Verilog starters.
 
 What it does?

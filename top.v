@@ -38,7 +38,7 @@ CLK_DIV8 U1 (
 // note that we DO NOT generate new clock, but rather
 // we generate CEO - Counter Enable Output, which can be used by CE Input
 // on cascaded counter
-CD100000 U2 (
+CD100_000 U2 (
   .C( clk_1mhz ),    // input 1MHz clock
   .CEO( internal_ce) // output for cascaded counter (Counter Enable)
 );
@@ -60,7 +60,7 @@ endmodule
 // counter by 100_000 - used to "divide" 1 MHz to 10Hz
 // Usage: chained (cascaded) counter should use again C clock as input
 //        and additionally connect this CEO to its CE input
-module CD100000(input C,output CEO);
+module CD100_000(input C,output CEO);
 
 localparam TERMINAL_COUNT = 17'd99_999; 
 reg [17:0] counter_int  = 0; // internal counter

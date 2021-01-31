@@ -42,7 +42,7 @@ There are only two Verilog files:
   to real pins on CPLD. It uses following modules:
   - `CLK_DIV8` - on-chip clock divider by 8x, 1 MHz output is connected
      to internal variable `clk_1mhz`
-  - `CD100000` - synchronous cascadable decimal counter, used to
+  - `CD100_000` - synchronous cascadable decimal counter, used to
      "divide" 1 Mhz to 10 Hz. Please note that all counters in cascade
      further use `clk_1mhz`. The "clock division" is realised by
      pulse `CE` (Counter Enable), that is active on every 100_000 Clock

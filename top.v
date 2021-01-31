@@ -63,7 +63,7 @@ endmodule
 module CD100_000(input C,output CEO);
 
 localparam TERMINAL_COUNT = 17'd99_999; 
-reg [17:0] counter_int  = 0; // internal counter
+reg [16:0] counter_int  = 0; // internal counter
 
 always @(posedge C)
    if (counter_int < TERMINAL_COUNT)

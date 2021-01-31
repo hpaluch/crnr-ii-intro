@@ -3,7 +3,7 @@
  
 cpldfit:  version P.20131013                        Xilinx Inc.
                                   Fitter Report
-Design Name: top                                 Date:  1-31-2021,  8:25AM
+Design Name: top                                 Date:  1-31-2021,  8:35AM
 Device Used: XC2C256-7-TQ144
 Fitting Status: Successful
 
@@ -11,14 +11,14 @@ Fitting Status: Successful
 
 Macrocells     Product Terms    Function Block   Registers      Pins           
 Used/Tot       Used/Tot         Inps Used/Tot    Used/Tot       Used/Tot       
-34 /256 ( 13%) 72  /896  (  8%) 53  /640  (  8%) 26 /256 ( 10%) 10 /118 (  8%)
+34 /256 ( 13%) 72  /896  (  8%) 60  /640  (  9%) 25 /256 ( 10%) 10 /118 (  8%)
 
 ** Function Block Resources **
 
 Function Mcells   FB Inps  Pterms   IO       CTC      CTR      CTS      CTE     
 Block    Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot
-FB1      16/16*    19/40    44/56     0/ 6    0/1      0/1      0/1      0/1
-FB2      14/16     30/40    24/56     5/ 8    0/1      0/1      0/1      0/1
+FB1      16/16*    24/40    44/56     0/ 6    0/1      0/1      0/1      0/1
+FB2      14/16     32/40    24/56     5/ 8    0/1      0/1      0/1      0/1
 FB3       0/16      0/40     0/56     0/ 6    0/1      0/1      0/1      0/1
 FB4       0/16      0/40     0/56     0/ 8    0/1      0/1      0/1      0/1
 FB5       0/16      0/40     0/56     0/ 5    0/1      0/1      0/1      0/1
@@ -34,7 +34,7 @@ FB14      4/16      4/40     4/56     4/ 8    0/1      0/1      0/1      0/1
 FB15      0/16      0/40     0/56     0/ 7    0/1      0/1      0/1      0/1
 FB16      0/16      0/40     0/56     0/ 7    0/1      0/1      0/1      0/1
          -----    -------  -------   -----    ---      ---      ---      ---
-Total    34/256    53/640   72/896    9/117   0/16     0/16     0/16     0/16
+Total    34/256    60/640   72/896    9/117   0/16     0/16     0/16     0/16
 
 CTC - Control Term Clock
 CTR - Control Term Reset
@@ -84,7 +84,7 @@ Name                Pts   Inps               No.   Type      Use     STD      St
 J1_IO1_4<3>         3     6     2    FB2_3   3     GTS/I/O   O       LVCMOS18           FAST DFF     RESET
 J1_IO1_4<2>         3     5     2    FB2_5   5     GTS/I/O   O       LVCMOS18           FAST DFF     RESET
 J1_IO1_4<1>         3     4     2    FB2_13  7     I/O       O       LVCMOS18           FAST DFF     RESET
-J1_IO7              1     14    2    FB2_14  9     I/O       O       LVCMOS18           FAST         
+J1_IO7              1     10    2    FB2_14  9     I/O       O       LVCMOS18           FAST         
 J1_IO1_4<0>         2     2     2    FB2_15  10    I/O       O       LVCMOS18           FAST DEFF    RESET
 LEDS<0>             1     1     1    FB14_4  69    I/O       O       LVCMOS18           FAST TFF     RESET
 LEDS<1>             1     2     1    FB14_6  68    I/O       O       LVCMOS18           FAST TFF     RESET
@@ -95,31 +95,31 @@ LEDS<3>             1     4     1    FB14_14 64    I/O       O       LVCMOS18   
 
 Signal              Total Total Loc     Reg     Reg Init
 Name                Pts   Inps          Use     State
-U2/counter_int<7>   3     9     FB1_1   TFF     RESET
-U2/counter_int<9>   3     8     FB1_2   TFF     RESET
-U2/counter_int<5>   2     3     FB1_3   DFF     RESET
-U2/counter_int<6>   3     4     FB1_4   DFF     RESET
-U2/counter_int<10>  3     8     FB1_5   TFF     RESET
-N_PZ_171            1     5     FB1_6           
-N_PZ_180            4     9     FB1_7           
-U2/counter_int<11>  4     5     FB1_8   DFF     RESET
-U2/counter_int<12>  4     6     FB1_9   TFF     RESET
-U2/counter_int<13>  4     7     FB1_10  TFF     RESET
-U2/counter_int<14>  4     8     FB1_11  TFF     RESET
-N_PZ_156            3     7     FB1_12          
-N_PZ_140            4     9     FB1_13          
-U2/counter_int<8>   2     7     FB1_14  DFF     RESET
-U2/counter_int<15>  3     9     FB1_15  TFF     RESET
-U2/counter_int<16>  3     10    FB1_16  DFF     RESET
-U2/counter_int<0>   1     2     FB2_2   DFF     RESET
-N_PZ_179            1     3     FB2_6           
-U2/counter_int<1>   2     3     FB2_7   DFF     RESET
-U2/counter_int<2>   2     5     FB2_8   DFF     RESET
-N_PZ_163            1     3     FB2_9           
-U2/counter_int<3>   2     3     FB2_10  DFF     RESET
-U2/counter_int<4>   2     5     FB2_11  DFF     RESET
-U2/counter_int<17>  0     0     FB2_12  DFF     RESET
-N_PZ_139            1     3     FB2_16          
+U2/counter_int<0>   1     4     FB1_1   TFF     RESET
+U2/counter_int<1>   3     5     FB1_2   DFF     RESET
+U2/counter_int<13>  3     6     FB1_3   TFF     RESET
+U2/counter_int<12>  3     5     FB1_4   TFF     RESET
+U2/counter_int<2>   4     7     FB1_5   DFF     RESET
+U2/counter_int<11>  3     4     FB1_6   DFF     RESET
+U2/counter_int<3>   3     5     FB1_7   DFF     RESET
+U2/counter_int<4>   4     7     FB1_8   DFF     RESET
+N_PZ_134            4     7     FB1_9           
+U2/counter_int<6>   4     7     FB1_10  DFF     RESET
+N_PZ_168            2     7     FB1_11          
+U2/counter_int<9>   2     3     FB1_12  DFF     RESET
+U2/counter_int<7>   2     3     FB1_13  DFF     RESET
+U2/counter_int<10>  2     5     FB1_14  DFF     RESET
+U2/counter_int<8>   5     9     FB1_15  DFF     RESET
+U2/counter_int<5>   5     9     FB1_16  DFF     RESET
+N_PZ_157            1     3     FB2_2           
+N_PZ_163            1     3     FB2_6           
+N_PZ_135            1     3     FB2_7           
+N_PZ_165            1     4     FB2_8           
+U2/counter_int<15>  2     6     FB2_9   TFF     RESET
+U2/counter_int<16>  2     7     FB2_10  TFF     RESET
+U2/counter_int<14>  3     7     FB2_11  TFF     RESET
+N_PZ_169            1     3     FB2_12          
+N_PZ_131            1     3     FB2_16          
 
 ** 1 Inputs **
 
@@ -153,127 +153,128 @@ Pin Type/Use - I  - Input             GCK - Global clock
 Pin No.      - ~  - User Assigned
 *********************************** FB1  ***********************************
 This function block is part of I/O Bank number:               2
-Number of function block inputs used/remaining:               19/21
+Number of function block inputs used/remaining:               24/16
 Number of function block control terms used/remaining:        0/4
 Number of PLA product terms used/remaining:                   44/12
 Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
 Name                          Pt            No.  Type    Use   
-U2/counter_int<7>             3     FB1_1        (b)     (b)               
-U2/counter_int<9>             3     FB1_2        (b)     (b)               
-U2/counter_int<5>             2     FB1_3   143  GSR/I/O (b)               
-U2/counter_int<6>             3     FB1_4   142  I/O     (b)               
-U2/counter_int<10>            3     FB1_5        (b)     (b)               
-N_PZ_171                      1     FB1_6   140  I/O     (b)               
-N_PZ_180                      4     FB1_7        (b)     (b)               
-U2/counter_int<11>            4     FB1_8        (b)     (b)               
-U2/counter_int<12>            4     FB1_9        (b)     (b)               
-U2/counter_int<13>            4     FB1_10       (b)     (b)               
-U2/counter_int<14>            4     FB1_11       (b)     (b)               
-N_PZ_156                      3     FB1_12  139  I/O     (b)               
-N_PZ_140                      4     FB1_13  138  I/O     (b)               
-U2/counter_int<8>             2     FB1_14  137  I/O     (b)               
-U2/counter_int<15>            3     FB1_15       (b)     (b)               
-U2/counter_int<16>            3     FB1_16       (b)     (b)               
+U2/counter_int<0>             1     FB1_1        (b)     (b)               
+U2/counter_int<1>             3     FB1_2        (b)     (b)               
+U2/counter_int<13>            3     FB1_3   143  GSR/I/O (b)               
+U2/counter_int<12>            3     FB1_4   142  I/O     (b)               
+U2/counter_int<2>             4     FB1_5        (b)     (b)               
+U2/counter_int<11>            3     FB1_6   140  I/O     (b)               
+U2/counter_int<3>             3     FB1_7        (b)     (b)               
+U2/counter_int<4>             4     FB1_8        (b)     (b)               
+N_PZ_134                      4     FB1_9        (b)     (b)               
+U2/counter_int<6>             4     FB1_10       (b)     (b)               
+N_PZ_168                      2     FB1_11       (b)     (b)               
+U2/counter_int<9>             2     FB1_12  139  I/O     (b)               
+U2/counter_int<7>             2     FB1_13  138  I/O     (b)               
+U2/counter_int<10>            2     FB1_14  137  I/O     (b)               
+U2/counter_int<8>             5     FB1_15       (b)     (b)               
+U2/counter_int<5>             5     FB1_16       (b)     (b)               
 
 Signals Used by Logic in Function Block
-  1: N_PZ_139             8: U2/counter_int<11>  14: U2/counter_int<17> 
-  2: N_PZ_140             9: U2/counter_int<12>  15: U2/counter_int<5> 
-  3: N_PZ_156            10: U2/counter_int<13>  16: U2/counter_int<6> 
-  4: N_PZ_163            11: U2/counter_int<14>  17: U2/counter_int<7> 
-  5: N_PZ_171            12: U2/counter_int<15>  18: U2/counter_int<8> 
-  6: N_PZ_180            13: U2/counter_int<16>  19: U2/counter_int<9> 
-  7: U2/counter_int<10> 
+  1: N_PZ_131           9: U2/counter_int<0>   17: U2/counter_int<2> 
+  2: N_PZ_134          10: U2/counter_int<10>  18: U2/counter_int<3> 
+  3: N_PZ_135          11: U2/counter_int<11>  19: U2/counter_int<4> 
+  4: N_PZ_157          12: U2/counter_int<12>  20: U2/counter_int<5> 
+  5: N_PZ_163          13: U2/counter_int<13>  21: U2/counter_int<6> 
+  6: N_PZ_165          14: U2/counter_int<15>  22: U2/counter_int<7> 
+  7: N_PZ_168          15: U2/counter_int<16>  23: U2/counter_int<8> 
+  8: N_PZ_169          16: U2/counter_int<1>   24: U2/counter_int<9> 
 
 Signal                     1         2         3         4 FB      
 Name             0----+----0----+----0----+----0----+----0 Inputs  
-U2/counter_int<7> 
-                  .X.X..X....XX.XXX.X..................... 9       
-U2/counter_int<9> 
-                  .X.XX.X....XX...X.X..................... 8       
-U2/counter_int<5> 
-                  ..XX..........X......................... 3       
-U2/counter_int<6> 
-                  ..XX..........XX........................ 4       
-U2/counter_int<10> 
-                  .X.XX.X....XX...X.X..................... 8       
-N_PZ_171          ...X..........XXXX...................... 5       
-N_PZ_180          ......XXXXXXX....XX..................... 9       
-U2/counter_int<11> 
-                  X......X...XXX.......................... 5       
-U2/counter_int<12> 
-                  X......XX..XXX.......................... 6       
+U2/counter_int<0> 
+                  .X......X....XX......................... 4       
+U2/counter_int<1> 
+                  .X......X....XXX........................ 5       
 U2/counter_int<13> 
-                  X......XXX.XXX.......................... 7       
-U2/counter_int<14> 
-                  X......XXXXXXX.......................... 8       
-N_PZ_156          .....XX....XXX..X.X..................... 7       
-N_PZ_140          .....XX....XXXXXX.X..................... 9       
+                  ..X.......XXXXX......................... 6       
+U2/counter_int<12> 
+                  ..X.......XX.XX......................... 5       
+U2/counter_int<2> 
+                  .X.....XX....XXXX....................... 7       
+U2/counter_int<11> 
+                  ..X.......X..XX......................... 4       
+U2/counter_int<3> 
+                  .X.....X.....XX..X...................... 5       
+U2/counter_int<4> 
+                  .X.X...X.....XX..XX..................... 7       
+N_PZ_134          .....X...X.........XXXXX................ 7       
+U2/counter_int<6> 
+                  XX.X.........XX....XX................... 7       
+N_PZ_168          .X.X.....X...XX......X.X................ 7       
+U2/counter_int<9> 
+                  ....X.X................X................ 3       
+U2/counter_int<7> 
+                  X.....X..............X.................. 3       
+U2/counter_int<10> 
+                  ..X.X.X..X.............X................ 5       
 U2/counter_int<8> 
-                  ..XXX.........XXXX...................... 7       
-U2/counter_int<15> 
-                  XXXX...XXXXX............................ 9       
-U2/counter_int<16> 
-                  XXXX...XXXXXX........................... 10      
+                  X...XX...X...XX......XXX................ 9       
+U2/counter_int<5> 
+                  ...X.X...X...XX....X.XXX................ 9       
                  0----+----1----+----2----+----3----+----4
                            0         0         0         0
 *********************************** FB2  ***********************************
 This function block is part of I/O Bank number:               2
-Number of function block inputs used/remaining:               30/10
+Number of function block inputs used/remaining:               32/8
 Number of function block control terms used/remaining:        0/4
 Number of PLA product terms used/remaining:                   24/32
 Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
 Name                          Pt            No.  Type    Use   
 (unused)                      0     FB2_1   2    GTS/I/O       
-U2/counter_int<0>             1     FB2_2        (b)     (b)               
+N_PZ_157                      1     FB2_2        (b)     (b)               
 J1_IO1_4<3>                   3     FB2_3   3    GTS/I/O O                 
 (unused)                      0     FB2_4   4    I/O           
 J1_IO1_4<2>                   3     FB2_5   5    GTS/I/O O                 
-N_PZ_179                      1     FB2_6        (b)     (b)               
-U2/counter_int<1>             2     FB2_7        (b)     (b)               
-U2/counter_int<2>             2     FB2_8        (b)     (b)               
-N_PZ_163                      1     FB2_9        (b)     (b)               
-U2/counter_int<3>             2     FB2_10       (b)     (b)               
-U2/counter_int<4>             2     FB2_11       (b)     (b)               
-U2/counter_int<17>            0     FB2_12  6    GTS/I/O (b)               
+N_PZ_163                      1     FB2_6        (b)     (b)               
+N_PZ_135                      1     FB2_7        (b)     (b)               
+N_PZ_165                      1     FB2_8        (b)     (b)               
+U2/counter_int<15>            2     FB2_9        (b)     (b)               
+U2/counter_int<16>            2     FB2_10       (b)     (b)               
+U2/counter_int<14>            3     FB2_11       (b)     (b)               
+N_PZ_169                      1     FB2_12  6    GTS/I/O (b)               
 J1_IO1_4<1>                   3     FB2_13  7    I/O     O                 
 J1_IO7                        1     FB2_14  9    I/O     O                 
 J1_IO1_4<0>                   2     FB2_15  10   I/O     O                 
-N_PZ_139                      1     FB2_16       (b)     (b)               
+N_PZ_131                      1     FB2_16       (b)     (b)               
 
 Signals Used by Logic in Function Block
-  1: J1_IO1_4<1>       11: N_PZ_171            21: U2/counter_int<17> 
-  2: J1_IO1_4<2>       12: N_PZ_179            22: U2/counter_int<1> 
-  3: J1_IO1_4<3>       13: U2/counter_int<0>   23: U2/counter_int<2> 
-  4: J1_IO7            14: U2/counter_int<10>  24: U2/counter_int<3> 
-  5: LEDS<0>           15: U2/counter_int<11>  25: U2/counter_int<4> 
-  6: LEDS<1>           16: U2/counter_int<12>  26: U2/counter_int<5> 
-  7: LEDS<2>           17: U2/counter_int<13>  27: U2/counter_int<6> 
-  8: LEDS<3>           18: U2/counter_int<14>  28: U2/counter_int<7> 
-  9: N_PZ_140          19: U2/counter_int<15>  29: U2/counter_int<8> 
- 10: N_PZ_163          20: U2/counter_int<16>  30: U2/counter_int<9> 
+  1: J1_IO1_4<1>       12: N_PZ_163            23: U2/counter_int<16> 
+  2: J1_IO1_4<2>       13: N_PZ_165            24: U2/counter_int<1> 
+  3: J1_IO1_4<3>       14: N_PZ_168            25: U2/counter_int<2> 
+  4: J1_IO7            15: N_PZ_169            26: U2/counter_int<3> 
+  5: LEDS<0>           16: U2/counter_int<0>   27: U2/counter_int<4> 
+  6: LEDS<1>           17: U2/counter_int<10>  28: U2/counter_int<5> 
+  7: LEDS<2>           18: U2/counter_int<11>  29: U2/counter_int<6> 
+  8: LEDS<3>           19: U2/counter_int<12>  30: U2/counter_int<7> 
+  9: N_PZ_131          20: U2/counter_int<13>  31: U2/counter_int<8> 
+ 10: N_PZ_135          21: U2/counter_int<14>  32: U2/counter_int<9> 
+ 11: N_PZ_157          22: U2/counter_int<15> 
 
 Signal                     1         2         3         4 FB      
 Name             0----+----0----+----0----+----0----+----0 Inputs  
-U2/counter_int<0> 
-                  ........X...X........................... 2       
+N_PZ_157          ..............X..........XX............. 3       
 J1_IO1_4<3>       ..XXXXXX................................ 6       
 J1_IO1_4<2>       .X.XXXX................................. 5       
-N_PZ_179          ............X........XX................. 3       
-U2/counter_int<1> 
-                  ........X...X........X.................. 3       
-U2/counter_int<2> 
-                  ........X..XX........XX................. 5       
-N_PZ_163          ...........X...........XX............... 3       
-U2/counter_int<3> 
-                  ........X..X...........X................ 3       
-U2/counter_int<4> 
-                  ........XX.X...........XX............... 5       
-U2/counter_int<17> 
-                  ........................................ 0       
+N_PZ_163          ........X....................XX......... 3       
+N_PZ_135          ...........X....X..............X........ 3       
+N_PZ_165          .................XXXX................... 4       
+U2/counter_int<15> 
+                  .........X...X...XXXX................... 6       
+U2/counter_int<16> 
+                  .........X...X...XXXXX.................. 7       
+U2/counter_int<14> 
+                  .........X.......XXXXXX................. 7       
+N_PZ_169          ...............X.......XX............... 3       
 J1_IO1_4<1>       X..XXX.................................. 4       
-J1_IO7            .........X...XXXXXXXX....XXXXX.......... 14      
+J1_IO7            ..........X.X...X....XX....XXXXX........ 10      
 J1_IO1_4<0>       ...XX................................... 2       
-N_PZ_139          ..........X..X...............X.......... 3       
+N_PZ_131          ..........X................XX........... 3       
                  0----+----1----+----2----+----3----+----4
                            0         0         0         0
 *********************************** FB3  ***********************************
@@ -633,11 +634,10 @@ J1_IO1_4_D(3) <= (J1_IO7 AND LEDS(3))
 	OR (J1_IO7 AND LEDS(0) AND LEDS(1) AND LEDS(2)));
 
 
-J1_IO7 <= (U2/counter_int(10) AND U2/counter_int(15) AND 
-	U2/counter_int(16) AND N_PZ_163 AND U2/counter_int(7) AND U2/counter_int(9) AND 
-	NOT U2/counter_int(5) AND NOT U2/counter_int(6) AND NOT U2/counter_int(8) AND 
-	NOT U2/counter_int(17) AND NOT U2/counter_int(11) AND NOT U2/counter_int(12) AND 
-	NOT U2/counter_int(13) AND NOT U2/counter_int(14));
+J1_IO7 <= (U2/counter_int(10) AND U2/counter_int(9) AND 
+	U2/counter_int(7) AND U2/counter_int(15) AND U2/counter_int(16) AND 
+	N_PZ_157 AND NOT U2/counter_int(5) AND NOT U2/counter_int(8) AND N_PZ_165 AND 
+	NOT U2/counter_int(6));
 
 FTCPE_LEDS0: FTCPE port map (LEDS(0),J1_IO7,PCLK,'0','0','1');
 
@@ -651,152 +651,150 @@ FTCPE_LEDS3: FTCPE port map (LEDS(3),LEDS_T(3),PCLK,'0','0','1');
 LEDS_T(3) <= (J1_IO7 AND LEDS(0) AND LEDS(1) AND LEDS(2));
 
 
-N_PZ_139 <= (U2/counter_int(10) AND U2/counter_int(9) AND 
-	N_PZ_171);
+N_PZ_131 <= (N_PZ_157 AND U2/counter_int(5) AND U2/counter_int(6));
 
 
-N_PZ_140 <= ((U2/counter_int(17))
-	OR (N_PZ_180)
-	OR (U2/counter_int(10) AND U2/counter_int(15) AND 
-	U2/counter_int(16) AND U2/counter_int(7) AND U2/counter_int(9) AND 
-	U2/counter_int(5))
-	OR (U2/counter_int(10) AND U2/counter_int(15) AND 
-	U2/counter_int(16) AND U2/counter_int(7) AND U2/counter_int(9) AND 
-	U2/counter_int(6)));
+N_PZ_134 <= ((NOT N_PZ_165)
+	OR (U2/counter_int(10) AND U2/counter_int(9) AND 
+	U2/counter_int(8))
+	OR (U2/counter_int(10) AND U2/counter_int(9) AND 
+	U2/counter_int(7) AND U2/counter_int(5))
+	OR (U2/counter_int(10) AND U2/counter_int(9) AND 
+	U2/counter_int(7) AND U2/counter_int(6)));
 
 
-N_PZ_156 <= ((U2/counter_int(17))
-	OR (N_PZ_180)
-	OR (U2/counter_int(10) AND U2/counter_int(15) AND 
-	U2/counter_int(16) AND U2/counter_int(7) AND U2/counter_int(9)));
+N_PZ_135 <= (U2/counter_int(10) AND U2/counter_int(9) AND 
+	N_PZ_163);
 
 
-N_PZ_163 <= (U2/counter_int(3) AND N_PZ_179 AND U2/counter_int(4));
+N_PZ_157 <= (U2/counter_int(3) AND N_PZ_169 AND U2/counter_int(4));
 
 
-N_PZ_171 <= (N_PZ_163 AND U2/counter_int(7) AND U2/counter_int(5) AND 
-	U2/counter_int(6) AND U2/counter_int(8));
+N_PZ_163 <= (U2/counter_int(7) AND U2/counter_int(8) AND N_PZ_131);
 
 
-N_PZ_179 <= (U2/counter_int(0) AND U2/counter_int(1) AND 
+N_PZ_165 <= (NOT U2/counter_int(11) AND NOT U2/counter_int(12) AND 
+	NOT U2/counter_int(13) AND NOT U2/counter_int(14));
+
+
+N_PZ_168 <= ((U2/counter_int(15) AND U2/counter_int(16) AND 
+	N_PZ_134)
+	OR (U2/counter_int(10) AND U2/counter_int(9) AND 
+	U2/counter_int(7) AND U2/counter_int(15) AND U2/counter_int(16) AND 
+	N_PZ_157));
+
+
+N_PZ_169 <= (U2/counter_int(0) AND U2/counter_int(1) AND 
 	U2/counter_int(2));
 
-
-N_PZ_180 <= (U2/counter_int(15) AND U2/counter_int(16))
-	XOR ((NOT U2/counter_int(10) AND U2/counter_int(15) AND 
-	U2/counter_int(16) AND NOT U2/counter_int(11) AND NOT U2/counter_int(12) AND 
-	NOT U2/counter_int(13) AND NOT U2/counter_int(14))
-	OR (U2/counter_int(15) AND U2/counter_int(16) AND 
-	NOT U2/counter_int(9) AND NOT U2/counter_int(11) AND NOT U2/counter_int(12) AND 
-	NOT U2/counter_int(13) AND NOT U2/counter_int(14))
-	OR (U2/counter_int(15) AND U2/counter_int(16) AND 
-	NOT U2/counter_int(8) AND NOT U2/counter_int(11) AND NOT U2/counter_int(12) AND 
-	NOT U2/counter_int(13) AND NOT U2/counter_int(14)));
-
-FDCPE_U2/counter_int0: FDCPE port map (U2/counter_int(0),U2/counter_int_D(0),PCLK,'0','0','1');
-U2/counter_int_D(0) <= (NOT N_PZ_140 AND NOT U2/counter_int(0));
+FTCPE_U2/counter_int0: FTCPE port map (U2/counter_int(0),U2/counter_int_T(0),PCLK,'0','0','1');
+U2/counter_int_T(0) <= NOT ((U2/counter_int(15) AND U2/counter_int(16) AND 
+	N_PZ_134 AND NOT U2/counter_int(0)));
 
 FDCPE_U2/counter_int1: FDCPE port map (U2/counter_int(1),U2/counter_int_D(1),PCLK,'0','0','1');
-U2/counter_int_D(1) <= ((NOT N_PZ_140 AND U2/counter_int(0) AND NOT U2/counter_int(1))
-	OR (NOT N_PZ_140 AND NOT U2/counter_int(0) AND U2/counter_int(1)));
+U2/counter_int_D(1) <= NOT (((U2/counter_int(0) AND U2/counter_int(1))
+	OR (NOT U2/counter_int(0) AND NOT U2/counter_int(1))
+	OR (U2/counter_int(15) AND U2/counter_int(16) AND 
+	N_PZ_134)));
 
 FDCPE_U2/counter_int2: FDCPE port map (U2/counter_int(2),U2/counter_int_D(2),PCLK,'0','0','1');
-U2/counter_int_D(2) <= ((NOT N_PZ_140 AND NOT N_PZ_179 AND U2/counter_int(2))
-	OR (NOT N_PZ_140 AND NOT N_PZ_179 AND U2/counter_int(0) AND 
-	U2/counter_int(1)));
+U2/counter_int_D(2) <= NOT (((N_PZ_169)
+	OR (NOT U2/counter_int(0) AND NOT U2/counter_int(2))
+	OR (NOT U2/counter_int(1) AND NOT U2/counter_int(2))
+	OR (U2/counter_int(15) AND U2/counter_int(16) AND 
+	N_PZ_134)));
 
 FDCPE_U2/counter_int3: FDCPE port map (U2/counter_int(3),U2/counter_int_D(3),PCLK,'0','0','1');
-U2/counter_int_D(3) <= ((NOT N_PZ_140 AND U2/counter_int(3) AND NOT N_PZ_179)
-	OR (NOT N_PZ_140 AND NOT U2/counter_int(3) AND N_PZ_179));
+U2/counter_int_D(3) <= NOT (((U2/counter_int(3) AND N_PZ_169)
+	OR (NOT U2/counter_int(3) AND NOT N_PZ_169)
+	OR (U2/counter_int(15) AND U2/counter_int(16) AND 
+	N_PZ_134)));
 
 FDCPE_U2/counter_int4: FDCPE port map (U2/counter_int(4),U2/counter_int_D(4),PCLK,'0','0','1');
-U2/counter_int_D(4) <= ((NOT N_PZ_140 AND NOT N_PZ_163 AND U2/counter_int(4))
-	OR (NOT N_PZ_140 AND NOT N_PZ_163 AND U2/counter_int(3) AND 
-	N_PZ_179));
+U2/counter_int_D(4) <= NOT (((N_PZ_157)
+	OR (NOT U2/counter_int(3) AND NOT U2/counter_int(4))
+	OR (NOT N_PZ_169 AND NOT U2/counter_int(4))
+	OR (U2/counter_int(15) AND U2/counter_int(16) AND 
+	N_PZ_134)));
 
 FDCPE_U2/counter_int5: FDCPE port map (U2/counter_int(5),U2/counter_int_D(5),PCLK,'0','0','1');
-U2/counter_int_D(5) <= ((N_PZ_163 AND NOT N_PZ_156 AND NOT U2/counter_int(5))
-	OR (NOT N_PZ_163 AND NOT N_PZ_156 AND U2/counter_int(5)));
+U2/counter_int_D(5) <= NOT (((N_PZ_157 AND U2/counter_int(5))
+	OR (NOT N_PZ_157 AND NOT U2/counter_int(5))
+	OR (U2/counter_int(15) AND U2/counter_int(16) AND 
+	NOT N_PZ_165)
+	OR (U2/counter_int(10) AND U2/counter_int(9) AND 
+	U2/counter_int(7) AND U2/counter_int(15) AND U2/counter_int(16))
+	OR (U2/counter_int(10) AND U2/counter_int(9) AND 
+	U2/counter_int(15) AND U2/counter_int(16) AND U2/counter_int(8))));
 
 FDCPE_U2/counter_int6: FDCPE port map (U2/counter_int(6),U2/counter_int_D(6),PCLK,'0','0','1');
-U2/counter_int_D(6) <= ((NOT N_PZ_163 AND NOT N_PZ_156 AND U2/counter_int(6))
-	OR (NOT N_PZ_156 AND NOT U2/counter_int(5) AND U2/counter_int(6))
-	OR (N_PZ_163 AND NOT N_PZ_156 AND U2/counter_int(5) AND 
-	NOT U2/counter_int(6)));
+U2/counter_int_D(6) <= NOT (((N_PZ_131)
+	OR (NOT N_PZ_157 AND NOT U2/counter_int(6))
+	OR (NOT U2/counter_int(5) AND NOT U2/counter_int(6))
+	OR (U2/counter_int(15) AND U2/counter_int(16) AND 
+	N_PZ_134)));
 
-FTCPE_U2/counter_int7: FTCPE port map (U2/counter_int(7),U2/counter_int_T(7),PCLK,'0','0','1');
-U2/counter_int_T(7) <= ((N_PZ_140 AND U2/counter_int(7))
-	OR (NOT N_PZ_140 AND N_PZ_163 AND U2/counter_int(5) AND 
-	U2/counter_int(6))
-	OR (U2/counter_int(10) AND U2/counter_int(15) AND 
-	U2/counter_int(16) AND N_PZ_163 AND U2/counter_int(7) AND U2/counter_int(9)));
+FDCPE_U2/counter_int7: FDCPE port map (U2/counter_int(7),U2/counter_int_D(7),PCLK,'0','0','1');
+U2/counter_int_D(7) <= ((U2/counter_int(7) AND NOT N_PZ_168 AND NOT N_PZ_131)
+	OR (NOT U2/counter_int(7) AND NOT N_PZ_168 AND N_PZ_131));
 
 FDCPE_U2/counter_int8: FDCPE port map (U2/counter_int(8),U2/counter_int_D(8),PCLK,'0','0','1');
-U2/counter_int_D(8) <= ((NOT N_PZ_156 AND NOT N_PZ_171 AND U2/counter_int(8))
-	OR (N_PZ_163 AND NOT N_PZ_156 AND U2/counter_int(7) AND 
-	NOT N_PZ_171 AND U2/counter_int(5) AND U2/counter_int(6)));
+U2/counter_int_D(8) <= NOT (((N_PZ_163)
+	OR (NOT U2/counter_int(7) AND NOT U2/counter_int(8))
+	OR (NOT U2/counter_int(8) AND NOT N_PZ_131)
+	OR (U2/counter_int(15) AND U2/counter_int(16) AND 
+	NOT N_PZ_165)
+	OR (U2/counter_int(10) AND U2/counter_int(9) AND 
+	U2/counter_int(15) AND U2/counter_int(16))));
 
-FTCPE_U2/counter_int9: FTCPE port map (U2/counter_int(9),U2/counter_int_T(9),PCLK,'0','0','1');
-U2/counter_int_T(9) <= ((N_PZ_140 AND U2/counter_int(9))
-	OR (NOT N_PZ_140 AND N_PZ_171)
-	OR (U2/counter_int(10) AND U2/counter_int(15) AND 
-	U2/counter_int(16) AND N_PZ_163 AND U2/counter_int(7) AND U2/counter_int(9)));
+FDCPE_U2/counter_int9: FDCPE port map (U2/counter_int(9),U2/counter_int_D(9),PCLK,'0','0','1');
+U2/counter_int_D(9) <= ((U2/counter_int(9) AND NOT N_PZ_163 AND NOT N_PZ_168)
+	OR (NOT U2/counter_int(9) AND N_PZ_163 AND NOT N_PZ_168));
 
-FTCPE_U2/counter_int10: FTCPE port map (U2/counter_int(10),U2/counter_int_T(10),PCLK,'0','0','1');
-U2/counter_int_T(10) <= ((U2/counter_int(10) AND N_PZ_140)
-	OR (NOT N_PZ_140 AND U2/counter_int(9) AND N_PZ_171)
-	OR (U2/counter_int(10) AND U2/counter_int(15) AND 
-	U2/counter_int(16) AND N_PZ_163 AND U2/counter_int(7) AND U2/counter_int(9)));
+FDCPE_U2/counter_int10: FDCPE port map (U2/counter_int(10),U2/counter_int_D(10),PCLK,'0','0','1');
+U2/counter_int_D(10) <= ((U2/counter_int(10) AND NOT N_PZ_135 AND NOT N_PZ_168)
+	OR (NOT N_PZ_135 AND U2/counter_int(9) AND N_PZ_163 AND 
+	NOT N_PZ_168));
 
 FDCPE_U2/counter_int11: FDCPE port map (U2/counter_int(11),U2/counter_int_D(11),PCLK,'0','0','1');
-U2/counter_int_D(11) <= NOT (((U2/counter_int(17))
-	OR (U2/counter_int(15) AND U2/counter_int(16))
-	OR (U2/counter_int(11) AND N_PZ_139)
-	OR (NOT U2/counter_int(11) AND NOT N_PZ_139)));
+U2/counter_int_D(11) <= NOT (((N_PZ_135 AND U2/counter_int(11))
+	OR (NOT N_PZ_135 AND NOT U2/counter_int(11))
+	OR (U2/counter_int(15) AND U2/counter_int(16))));
 
 FTCPE_U2/counter_int12: FTCPE port map (U2/counter_int(12),U2/counter_int_T(12),PCLK,'0','0','1');
-U2/counter_int_T(12) <= ((U2/counter_int(17) AND U2/counter_int(12))
+U2/counter_int_T(12) <= ((N_PZ_135 AND NOT U2/counter_int(15) AND 
+	U2/counter_int(11))
+	OR (N_PZ_135 AND U2/counter_int(11) AND 
+	NOT U2/counter_int(16))
 	OR (U2/counter_int(15) AND U2/counter_int(16) AND 
-	U2/counter_int(12))
-	OR (NOT U2/counter_int(15) AND NOT U2/counter_int(17) AND 
-	U2/counter_int(11) AND N_PZ_139)
-	OR (NOT U2/counter_int(16) AND NOT U2/counter_int(17) AND 
-	U2/counter_int(11) AND N_PZ_139));
+	U2/counter_int(12)));
 
 FTCPE_U2/counter_int13: FTCPE port map (U2/counter_int(13),U2/counter_int_T(13),PCLK,'0','0','1');
-U2/counter_int_T(13) <= ((U2/counter_int(17) AND U2/counter_int(13))
-	OR (U2/counter_int(15) AND U2/counter_int(16) AND 
+U2/counter_int_T(13) <= ((U2/counter_int(15) AND U2/counter_int(16) AND 
 	U2/counter_int(13))
-	OR (NOT U2/counter_int(15) AND NOT U2/counter_int(17) AND 
-	U2/counter_int(11) AND N_PZ_139 AND U2/counter_int(12))
-	OR (NOT U2/counter_int(16) AND NOT U2/counter_int(17) AND 
-	U2/counter_int(11) AND N_PZ_139 AND U2/counter_int(12)));
+	OR (N_PZ_135 AND NOT U2/counter_int(15) AND 
+	U2/counter_int(11) AND U2/counter_int(12))
+	OR (N_PZ_135 AND U2/counter_int(11) AND 
+	NOT U2/counter_int(16) AND U2/counter_int(12)));
 
 FTCPE_U2/counter_int14: FTCPE port map (U2/counter_int(14),U2/counter_int_T(14),PCLK,'0','0','1');
-U2/counter_int_T(14) <= ((U2/counter_int(17) AND U2/counter_int(14))
-	OR (U2/counter_int(15) AND U2/counter_int(16) AND 
+U2/counter_int_T(14) <= ((U2/counter_int(15) AND U2/counter_int(16) AND 
 	U2/counter_int(14))
-	OR (NOT U2/counter_int(15) AND NOT U2/counter_int(17) AND 
-	U2/counter_int(11) AND N_PZ_139 AND U2/counter_int(12) AND 
-	U2/counter_int(13))
-	OR (NOT U2/counter_int(16) AND NOT U2/counter_int(17) AND 
-	U2/counter_int(11) AND N_PZ_139 AND U2/counter_int(12) AND 
-	U2/counter_int(13)));
+	OR (N_PZ_135 AND NOT U2/counter_int(15) AND 
+	U2/counter_int(11) AND U2/counter_int(12) AND U2/counter_int(13))
+	OR (N_PZ_135 AND U2/counter_int(11) AND 
+	NOT U2/counter_int(16) AND U2/counter_int(12) AND U2/counter_int(13)));
 
 FTCPE_U2/counter_int15: FTCPE port map (U2/counter_int(15),U2/counter_int_T(15),PCLK,'0','0','1');
-U2/counter_int_T(15) <= ((U2/counter_int(15) AND N_PZ_140)
-	OR (U2/counter_int(15) AND N_PZ_163 AND N_PZ_156)
-	OR (NOT N_PZ_156 AND U2/counter_int(11) AND N_PZ_139 AND 
+U2/counter_int_T(15) <= ((N_PZ_168)
+	OR (N_PZ_135 AND U2/counter_int(11) AND 
 	U2/counter_int(12) AND U2/counter_int(13) AND U2/counter_int(14)));
 
-FDCPE_U2/counter_int16: FDCPE port map (U2/counter_int(16),U2/counter_int_D(16),PCLK,'0','0','1');
-U2/counter_int_D(16) <= ((U2/counter_int(16) AND NOT N_PZ_156)
-	OR (NOT N_PZ_140 AND NOT N_PZ_163 AND N_PZ_156)
-	OR (U2/counter_int(15) AND NOT N_PZ_156 AND 
-	U2/counter_int(11) AND N_PZ_139 AND U2/counter_int(12) AND 
-	U2/counter_int(13) AND U2/counter_int(14)));
-
-FDCPE_U2/counter_int17: FDCPE port map (U2/counter_int(17),'0',PCLK,'0','0','1');
+FTCPE_U2/counter_int16: FTCPE port map (U2/counter_int(16),U2/counter_int_T(16),PCLK,'0','0','1');
+U2/counter_int_T(16) <= ((N_PZ_168)
+	OR (N_PZ_135 AND U2/counter_int(15) AND 
+	U2/counter_int(11) AND U2/counter_int(12) AND U2/counter_int(13) AND 
+	U2/counter_int(14)));
 
 
 Register Legend:
